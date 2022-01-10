@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Simple Address Book</title>
+</head>
+<body>
+    <h1>Simple Address Book</h1>
+    <form
+        action="#"
+        th:action="@{/contact}"
+        th:object="${contact}"
+        method="post"
+    >
+    <p>
+        <label>Name: </label>
+        <label th:text="${contact.name}" />
+    </p>
+    <p>
+        <label>Email Address: </label>
+        <label th:text="${contact.email}" />
+    </p>
+    <p>
+        <label>Phone Number: </label>
+        <label th:text="${contact.phoneNum}" />
+    </p>
+    <P>
+        <input type="submit" value="Edit" disabled/>
+    </P>
+    </form>
+</body>
+
+</html>
